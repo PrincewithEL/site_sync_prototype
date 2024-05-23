@@ -15,6 +15,51 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
   </head>
+      <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+            text-align: left;
+        }
+    </style>
   <body class="skin-black">
     <div class="wrapper">
       
@@ -260,18 +305,18 @@
                           </div>
                         </td>
                         <td class="mailbox-attachment">
-                          <form action="" method="">
                       <div class="form-group">
-                      <select class="form-control" style="">
-                        <option selected disabled>Select An Option</option>
-                        <option value=""><a href="chat.html">Chat Room</a></option>
-                        <option value=""><a href="resources.html">View Resources</a></option>
-                        <option value=""><a href="transactions.html">View Transactions</a></option>
-                        <option value=""><a href="project-dashboard.html">View Dashboard</a></option>
-                        <option value=""><a href="events.html">View Tasks & Events</a></option>
-                      </select>
+    <div class="dropdown">
+        <button class="dropbtn">Select An Option</button>
+        <div class="dropdown-content">
+            <a href="chat.html">Chat Room</a>
+            <a href="resources.html">View Resources</a>
+            <a href="transactions.html">View Transactions</a>
+            <a href="project-dashboard.html">View Dashboard</a>
+            <a href="events.html">View Tasks & Events</a>
+        </div>
+    </div>
                     </div>
-                  </form>
                         </td>
                         </tr>
                       </tbody>
